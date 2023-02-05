@@ -1,0 +1,29 @@
+{
+  "require-dev": {
+    "friendsofphp/php-cs-fixer": ">=2.16.3",
+    "mockery/mockery": "^1.5",
+    "phpunit/php-code-coverage": "^9.2"
+
+  },
+
+  "autoload": {
+    "psr-4": { "Main\\": "src/" }
+  },
+
+  "require": {
+    "php-ds/php-ds": "^1.4",
+    "phpunit/phpunit": "9.5",
+    "illuminate/collections": "^9.40"
+  },
+
+  "scripts": {
+    "test": "phpunit",
+    "coverage-html": "phpunit --coverage-html ./coverage/report",
+
+    "test-coverage": [
+      "./vendor/bin/phpunit --colors=always -c tests/unit/phpunit.xml --coverage-text"],
+
+    "code-coverage": [
+      "./bin/code-coverage -p 85 -f tests/unit/coverage/code-coverage.xml"]
+  }
+}
